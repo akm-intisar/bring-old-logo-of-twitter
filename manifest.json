@@ -1,0 +1,18 @@
+{
+  "name": "Twitter Logo Replacer",
+  "icons": {
+    "100": "icon.png"
+  },
+  "version": "1.0",
+  "description": "Replaces the Twitter logo with the 2021 version",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://twitter.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 3
+}
